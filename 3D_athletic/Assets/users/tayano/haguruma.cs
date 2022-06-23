@@ -26,6 +26,10 @@ public class haguruma : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
+        if (collision.gameObject.name == "playre_temp")
+        {
+            this.gameObject.transform.DetachChildren();
+        }
         Debug.Log("—£‚ê‚½");
     }
 }
