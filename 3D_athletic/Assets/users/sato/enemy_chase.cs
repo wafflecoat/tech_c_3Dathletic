@@ -10,7 +10,7 @@ public class enemy_chase : MonoBehaviour
     void Start()
     {
         speed = 0.035f;
-        target = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.FindGameObjectWithTag("Player1");
     }
 
     // Update is called once per frame
