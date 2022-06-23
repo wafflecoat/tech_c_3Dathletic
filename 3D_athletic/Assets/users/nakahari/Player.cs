@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public float jumpPower;
+    private Rigidbody rb;
+    private bool isJumping = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     [SerializeField] private Vector3 velocity; //ˆÚ“®•ûŒü
@@ -44,7 +46,20 @@ public class Player : MonoBehaviour
             //ˆÚ“®•ûŒüƒxƒNƒgƒ‹(velocity)‚ð‘«‚µ‚±‚Ý‚Ü‚·
             transform.position += velocity;
         }
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            rb.velocity = Vector3.up * jumpPower;
+            isJumping = true;
+        }
+        
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
     }
 
 }
