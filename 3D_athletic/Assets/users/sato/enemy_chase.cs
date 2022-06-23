@@ -9,7 +9,7 @@ public class enemy_chase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.035f;
+        speed = 0.005f;
         target = GameObject.FindGameObjectWithTag("Player1");
     }
 
