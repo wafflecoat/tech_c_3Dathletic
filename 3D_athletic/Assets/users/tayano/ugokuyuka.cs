@@ -9,7 +9,7 @@ public class ugokuyuka : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,10 +19,32 @@ public class ugokuyuka : MonoBehaviour
         transform.Translate(p);
         counter++;
 
-        if (counter ==1000)
+        if (counter == 1000)
         {
             counter = 0;
             move *= -1;
         }
+
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "playre_temp")
+        {
+            collision.transform.SetParent(this.gameObject.transform);
+        }
+        Debug.Log("“–‚½‚Á‚Ä‚¢‚é");
+
+
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "playre_temp")
+        {
+            this.gameObject.transform.DetachChildren();
+        }
+        Debug.Log("—£‚ê‚½");
+    }
+
 }
+
