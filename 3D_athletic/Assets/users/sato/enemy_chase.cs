@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemy_chase : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class enemy_chase : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Player1")
+        {
+            SceneManager.LoadScene("OrverScene");
+        }
         rb.isKinematic = true;
     }
     void OnCollisionExit(Collision collision)
