@@ -25,16 +25,31 @@ public class Player : MonoBehaviour
         velocity = Vector3.zero;
         //前へ進む
         if (Input.GetKey(KeyCode.W))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             velocity.z += 1;
+        }
         //左へ進む
         if (Input.GetKey(KeyCode.A))
+        {
+            transform.rotation = Quaternion.Euler(0, 270, 0);
             velocity.x -= 1;
+
+        }
+            
         //後ろへ進む
         if (Input.GetKey(KeyCode.S))
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             velocity.z -= 1;
+        }
         //右へ進む
         if (Input.GetKey(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
             velocity.x += 1;
+        }
+            
 
         //速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
         velocity = velocity.normalized * moveSpeed * Time.deltaTime;
