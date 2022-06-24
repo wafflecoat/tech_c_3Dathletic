@@ -22,7 +22,7 @@ public class goal : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //ボールにぶつかったとき
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player1")
         {
             SceneManager.LoadScene("ClearScene");
         }
