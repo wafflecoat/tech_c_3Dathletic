@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class stagedirector : MonoBehaviour
+public class rakkaorver : MonoBehaviour
 {
-    private GameObject pzahyou;
     // Start is called before the first frame update
     void Start()
     {
-        pzahyou = GameObject.FindGameObjectWithTag("Player1");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Mathf.Floor(this.transform.position.y)<=-300)
+        {
+            SceneManager.LoadScene("OrverScene");
+        }
     }
 }
