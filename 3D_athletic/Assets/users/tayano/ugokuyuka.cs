@@ -28,7 +28,7 @@ public class ugokuyuka : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "playre_temp")
+        if (collision.gameObject.name == "kyarakuta")
         {
             collision.transform.SetParent(this.gameObject.transform);
         }
@@ -39,7 +39,7 @@ public class ugokuyuka : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "playre_temp")
+        if (collision.gameObject.name == "kyarakuta")
         {
             this.gameObject.transform.DetachChildren();
         }
