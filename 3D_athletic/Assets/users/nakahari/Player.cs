@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float jumpPower;
     private Rigidbody rb;
     private bool isJumping = false;
+    private Vector3 latestPos;  //前回のPosition
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,11 @@ public class Player : MonoBehaviour
         //前へ進む
         if (Input.GetKey(KeyCode.W))
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
             velocity.z += 1;
         }
         //左へ進む
         if (Input.GetKey(KeyCode.A))
         {
-            transform.rotation = Quaternion.Euler(0, 270, 0);
             velocity.x -= 1;
 
         }
@@ -40,13 +39,11 @@ public class Player : MonoBehaviour
         //後ろへ進む
         if (Input.GetKey(KeyCode.S))
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
             velocity.z -= 1;
         }
         //右へ進む
         if (Input.GetKey(KeyCode.D))
         {
-            transform.rotation = Quaternion.Euler(0, 90, 0);
             velocity.x += 1;
         }
             
@@ -66,7 +63,16 @@ public class Player : MonoBehaviour
             rb.velocity = Vector3.up * jumpPower;
             isJumping = true;
         }
-        
+
+        Vector3 diff = transform.position - latestPos;   //前回からどこに進んだかをベクトルで取得
+        latestPos = transform.position;  //前回のPositionの更新
+
+        //ベクトルの大きさが0.01以上の時に向きを変える処理をする
+        if (diff.magnitude > 0.01f)
+        {
+            transform.rotation = Quaternion.LookRotation(velocity); //向きを変更する
+        }
+
 
     }
     private void OnCollisionEnter(Collision collision)
