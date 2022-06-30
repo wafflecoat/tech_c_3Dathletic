@@ -15,18 +15,16 @@ public class haguruma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 p = new Vector3(0, move, 0);
-        transform.Translate(p);
-        counter++;
+       
 
         if (counter == 300)
         {
             counter = 0;
             move *= -1;
         }
-        transform.Rotate(new Vector3(0f,-0.5f, 0f));
+        transform.Rotate(new Vector3(0f, -0.5f, 0f));
     }
-    private void OnCollisionEnter(Collision collision)
+private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "kyarakuta")
         {
