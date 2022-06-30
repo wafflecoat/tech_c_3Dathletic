@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class snowman : MonoBehaviour
 {
     int counter = 0;
@@ -5,13 +9,13 @@ public class snowman : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 p = new Vector3(0, 0, move);
+        Vector3 p = new Vector3(0,move,0);
         transform.Translate(p);
         counter++;
 
