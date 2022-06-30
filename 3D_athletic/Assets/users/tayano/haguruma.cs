@@ -14,7 +14,7 @@ public class haguruma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0f,-10f, 0f));
+        transform.Rotate(new Vector3(0f,-1f, 0f));
     }
     private void OnCollisionEnter(Collision collision)
     {
