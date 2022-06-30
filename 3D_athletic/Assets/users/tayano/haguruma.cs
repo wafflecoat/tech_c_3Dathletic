@@ -19,7 +19,7 @@ public class haguruma : MonoBehaviour
         transform.Translate(p);
         counter++;
 
-        if (counter == 1000)
+        if (counter == 500)
         {
             counter = 0;
             move *= -1;
