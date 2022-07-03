@@ -24,7 +24,7 @@ public class haguruma : MonoBehaviour
         }
         transform.Rotate(new Vector3(0f, -0.4f, 0f));
     }
-private void OnCollisionEnter(Collision collision)
+private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.name == "kyarakuta")
         {
