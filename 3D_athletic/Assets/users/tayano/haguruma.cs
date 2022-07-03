@@ -22,7 +22,7 @@ public class haguruma : MonoBehaviour
             counter = 0;
             move *= -1;
         }
-        transform.Rotate(new Vector3(0f, -0.5f, 0f));
+        transform.Rotate(new Vector3(0f, -0.4f, 0f));
     }
 private void OnCollisionEnter(Collision collision)
     {
