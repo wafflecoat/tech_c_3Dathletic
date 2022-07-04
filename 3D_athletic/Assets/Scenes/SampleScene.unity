@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 4.8
+  jump12: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   moveSpeed: 5
 --- !u!4 &243071823 stripped
@@ -2241,11 +2242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f17909e484199244196e5484739bbd3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.007
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f17909e484199244196e5484739bbd3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 395dc213f5210de40821b7e9f61aa444, type: 3}
       propertyPath: m_RootOrder
