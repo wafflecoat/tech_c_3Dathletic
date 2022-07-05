@@ -18,5 +18,9 @@ public class Orverdirector : MonoBehaviour
         {
             SceneManager.LoadScene("TitleScene");
         }
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("StageScene");
+        }
     }
 }
