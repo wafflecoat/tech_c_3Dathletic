@@ -5,7 +5,8 @@ using UnityEngine;
 public class ugokuyuka : MonoBehaviour
 {
     int counter = 0;
-    float move = 0.01f;
+    [SerializeField]  float move = 3.0f;//‘¬“x
+    float movespeed = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,13 @@ public class ugokuyuka : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 p = new Vector3(move, 0, 0);
+        
+        movespeed = move * Time.deltaTime;
+        Vector3 p = new Vector3(movespeed, 0, 0);
         transform.Translate(p);
         counter++;
 
-        if (counter == 1000)
+        if (counter == 1500)//‰•œ‚·‚é‚Ü‚Å‚Ì‹——£
         {
             counter = 0;
             move *= -1;
