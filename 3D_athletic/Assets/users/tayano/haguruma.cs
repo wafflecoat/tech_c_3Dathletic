@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class haguruma : MonoBehaviour
 {
-    int counter = 0;
+    //int counter = 0;
     float move = 0.01f;
     // Start is called before the first frame update
     void Start()
@@ -15,14 +15,11 @@ public class haguruma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-        if (counter == 300)
-        {
-            counter = 0;
-            move *= -1;
-        }
-        transform.Rotate(new Vector3(0f, -0.4f, 0f));
+
+        float rotateValue= 180 * Time.deltaTime;
+    
+        transform.Rotate(new Vector3(0f, rotateValue, 0f));
     }
 private void OnCollisionStay(Collision collision)
     {
