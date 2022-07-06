@@ -17,7 +17,7 @@ public class haguruma : MonoBehaviour
     {
 
 
-        float rotateValue= 90 * Time.deltaTime;
+        float rotateValue= 180 * Time.deltaTime;
     
         transform.Rotate(new Vector3(0f, rotateValue, 0f));
     }
