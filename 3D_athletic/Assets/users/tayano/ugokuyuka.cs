@@ -22,7 +22,7 @@ public class ugokuyuka : MonoBehaviour
         transform.Translate(p);
         counter++;
 
-        if (counter == 1500)//‰•œ‚·‚é‚Ü‚Å‚Ì‹——£
+        if (counter == 1000)//‰•œ‚·‚é‚Ü‚Å‚Ì‹——£
         {
             counter = 0;
             move *= -1;
