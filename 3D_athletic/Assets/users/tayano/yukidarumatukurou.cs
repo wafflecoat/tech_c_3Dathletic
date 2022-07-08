@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class yukidarumatukurou : MonoBehaviour
 {
-    int counter = 0;
+    float counter = 0;
     [SerializeField]  float move = 5f;//‘¬“x
     float movespeed = 0;
 
@@ -22,9 +22,9 @@ public class yukidarumatukurou : MonoBehaviour
         movespeed = move * Time.deltaTime;
         Vector3 p = new Vector3(0, 0, movespeed);
         transform.Translate(p);
-        counter++;
+        counter += Time.deltaTime;
 
-        if (counter == 1000)
+        if (counter >= 1)
         {
             counter = 0;
             move *= -1;
