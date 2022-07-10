@@ -76,12 +76,16 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(velocity); //Œü‚«‚ğ•ÏX‚·‚é
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        isJumping = true;
     }
 
 }
