@@ -14,7 +14,7 @@ public class rakkaorver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Mathf.Floor(this.transform.position.y)<=-2)
+        if(Mathf.Floor(this.transform.position.y)<=-8)
         {
             SceneManager.LoadScene("OrverScene");
         }
